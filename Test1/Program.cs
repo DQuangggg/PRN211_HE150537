@@ -45,9 +45,9 @@ namespace Test1
                 new StudentCodeFactory()
             };
 
-            foreach (var animal in studnetFactorieList)
+            foreach (var student in studnetFactorieList)
             {
-                animal.CreateStudent().Description();
+                student.CreateStudent().Description();
             }
             ReadLine();
         }
