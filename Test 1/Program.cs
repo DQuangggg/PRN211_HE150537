@@ -4,6 +4,7 @@ using static System.Console;
 
 namespace Test1
 {
+    //Name and StudentCode implement the Information interface method
     public interface Information
     {
         void Description();
@@ -23,13 +24,17 @@ namespace Test1
     {
         public abstract Information CreateStudent();
     }
+        //Create Name by NameFactory
     public class NameFactory : Factory
     {
+        //Create Name
         public override Information CreateStudent() => new Name();
     }
 
+        //Create StudentCode by StudentCodeFactory
     public class StudentCodeFactory : Factory
     {
+        //Create StudentCode
         public override Information CreateStudent() => new StudenCode();
 
     }
