@@ -42,8 +42,8 @@ namespace AutomobileLibrary.DataAccess
 
         public void AddNew(Car car)
         {
-            Car c = GetCarById(car.CarID);
-            if (c == null)
+            Car pro = GetCarById(car.CarID);
+            if (pro == null)
             {
                 CarList.Add(car);
             }

@@ -17,10 +17,6 @@ namespace AutomobileWinApp
         ICarRepository carRepository = new CarRepository();
         BindingSource source;
 
-        public bool InsertOrUpdate { get; private set; }
-        public Car CarInfo { get; private set; }
-        public ICarRepository CarRepository { get; private set; }
-
         public frmCarManagement()
         {
             InitializeComponent();
