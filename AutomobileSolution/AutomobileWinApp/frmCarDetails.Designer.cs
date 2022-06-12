@@ -41,6 +41,8 @@
             this.lbCarID = new System.Windows.Forms.Label();
             this.txtCarID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            this.Load += new System.EventHandler(this.frmCarDetails_Load);
+                 
             // 
             // lbCarName
             // 
