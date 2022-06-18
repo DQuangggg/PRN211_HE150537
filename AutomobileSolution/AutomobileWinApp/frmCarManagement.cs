@@ -143,5 +143,10 @@ namespace AutomobileWinApp
                 MessageBox.Show(ex.Message, "Delete a car");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
