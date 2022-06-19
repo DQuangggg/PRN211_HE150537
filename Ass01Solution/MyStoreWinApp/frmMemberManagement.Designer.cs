@@ -214,7 +214,7 @@
             // rdId
             // 
             this.rdId.AutoSize = true;
-            this.rdId.Location = new System.Drawing.Point(204, 255);
+            this.rdId.Location = new System.Drawing.Point(186, 255);
             this.rdId.Name = "rdId";
             this.rdId.Size = new System.Drawing.Size(90, 19);
             this.rdId.TabIndex = 18;
@@ -226,7 +226,7 @@
             // rdName
             // 
             this.rdName.AutoSize = true;
-            this.rdName.Location = new System.Drawing.Point(355, 255);
+            this.rdName.Location = new System.Drawing.Point(330, 255);
             this.rdName.Name = "rdName";
             this.rdName.Size = new System.Drawing.Size(111, 19);
             this.rdName.TabIndex = 19;

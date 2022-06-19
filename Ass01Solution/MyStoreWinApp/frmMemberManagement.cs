@@ -35,11 +35,6 @@ namespace MyStoreWinApp
 
         public void DgvMemberList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            UpdateByButton();
-        }
-
-        public void UpdateByButton()
-        {
             frmMemberDetails frmMemberDetails = new frmMemberDetails()
             {
                 Text = "Update Member",
@@ -53,6 +48,22 @@ namespace MyStoreWinApp
                 source.Position = source.Count - 1;
             }
         }
+
+    /*    public void UpdateByButton()
+        {
+            frmMemberDetails frmMemberDetails = new frmMemberDetails()
+            {
+                Text = "Update Member",
+                MemberInfo = GetMemberObject(),
+                InsertOrUpdate = "Update",
+                MemberRepository = memberRepository
+            };
+            if (frmMemberDetails.ShowDialog() == DialogResult.OK)
+            {
+                LoadDVGMemberList();
+                source.Position = source.Count - 1;
+            }
+        } */
 
         private void LoadDVGMemberList()
         {
@@ -158,7 +169,18 @@ namespace MyStoreWinApp
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            UpdateByButton();
+            frmMemberDetails frmMemberDetails = new frmMemberDetails()
+            {
+                Text = "Update Member",
+                MemberInfo = GetMemberObject(),
+                InsertOrUpdate = "Update",
+                MemberRepository = memberRepository
+            };
+            if (frmMemberDetails.ShowDialog() == DialogResult.OK)
+            {
+                LoadDVGMemberList();
+                source.Position = source.Count - 1;
+            }
         }
 
         private void dgvMemberList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -172,6 +194,11 @@ namespace MyStoreWinApp
         }
 
         private void rdName_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdCity_CheckedChanged(object sender, EventArgs e)
         {
 
         }

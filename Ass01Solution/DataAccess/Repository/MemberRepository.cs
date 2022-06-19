@@ -44,5 +44,7 @@ namespace DataAccess.Repository
         {
             return memberDAO.GetMemberByName(name);
         }
+
+
     }
 }

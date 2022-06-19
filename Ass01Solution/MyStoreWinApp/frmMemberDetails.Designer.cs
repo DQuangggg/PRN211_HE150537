@@ -43,6 +43,7 @@
             this.btSave = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            this.Load += new System.EventHandler(this.frmAddOrUpdate_Load);
             // 
             // lbMemberID
             // 
