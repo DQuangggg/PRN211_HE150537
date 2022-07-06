@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(179, 6);
+            this.label1.Location = new System.Drawing.Point(132, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(343, 50);
             this.label1.TabIndex = 0;
@@ -80,7 +80,7 @@
             // lbRequiredDate
             // 
             this.lbRequiredDate.AutoSize = true;
-            this.lbRequiredDate.Location = new System.Drawing.Point(397, 84);
+            this.lbRequiredDate.Location = new System.Drawing.Point(359, 84);
             this.lbRequiredDate.Name = "lbRequiredDate";
             this.lbRequiredDate.Size = new System.Drawing.Size(78, 15);
             this.lbRequiredDate.TabIndex = 3;
@@ -89,7 +89,7 @@
             // lbShippedDate
             // 
             this.lbShippedDate.AutoSize = true;
-            this.lbShippedDate.Location = new System.Drawing.Point(397, 125);
+            this.lbShippedDate.Location = new System.Drawing.Point(359, 125);
             this.lbShippedDate.Name = "lbShippedDate";
             this.lbShippedDate.Size = new System.Drawing.Size(74, 15);
             this.lbShippedDate.TabIndex = 4;
@@ -107,7 +107,7 @@
             // lbOrderDate
             // 
             this.lbOrderDate.AutoSize = true;
-            this.lbOrderDate.Location = new System.Drawing.Point(397, 170);
+            this.lbOrderDate.Location = new System.Drawing.Point(359, 170);
             this.lbOrderDate.Name = "lbOrderDate";
             this.lbOrderDate.Size = new System.Drawing.Size(61, 15);
             this.lbOrderDate.TabIndex = 6;
@@ -115,49 +115,49 @@
             // 
             // txtOrderID
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(149, 81);
+            this.txtOrderID.Location = new System.Drawing.Point(132, 81);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(196, 23);
             this.txtOrderID.TabIndex = 7;
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(515, 81);
+            this.txtRequiredDate.Location = new System.Drawing.Point(466, 81);
             this.txtRequiredDate.Name = "txtRequiredDate";
             this.txtRequiredDate.Size = new System.Drawing.Size(196, 23);
             this.txtRequiredDate.TabIndex = 8;
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(149, 122);
+            this.txtMemberID.Location = new System.Drawing.Point(132, 122);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(196, 23);
             this.txtMemberID.TabIndex = 9;
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(515, 167);
+            this.txtOrderDate.Location = new System.Drawing.Point(466, 167);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(196, 23);
             this.txtOrderDate.TabIndex = 10;
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(515, 122);
+            this.txtShippedDate.Location = new System.Drawing.Point(466, 122);
             this.txtShippedDate.Name = "txtShippedDate";
             this.txtShippedDate.Size = new System.Drawing.Size(196, 23);
             this.txtShippedDate.TabIndex = 11;
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(149, 167);
+            this.txtFreight.Location = new System.Drawing.Point(132, 167);
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(196, 23);
             this.txtFreight.TabIndex = 12;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(226, 231);
+            this.btnInsert.Location = new System.Drawing.Point(156, 231);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 13;
@@ -167,7 +167,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(371, 231);
+            this.btnUpdate.Location = new System.Drawing.Point(286, 231);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -177,7 +177,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(524, 231);
+            this.btnDelete.Location = new System.Drawing.Point(400, 231);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 15;
@@ -187,7 +187,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(371, 528);
+            this.btnCancel.Location = new System.Drawing.Point(286, 528);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -201,14 +201,14 @@
             this.dgvOrder.Location = new System.Drawing.Point(12, 270);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowTemplate.Height = 25;
-            this.dgvOrder.Size = new System.Drawing.Size(776, 252);
+            this.dgvOrder.Size = new System.Drawing.Size(664, 252);
             this.dgvOrder.TabIndex = 17;
             // 
             // frmManegerOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.ClientSize = new System.Drawing.Size(702, 573);
             this.Controls.Add(this.dgvOrder);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);

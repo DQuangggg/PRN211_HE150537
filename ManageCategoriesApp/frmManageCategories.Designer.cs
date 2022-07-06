@@ -128,7 +128,7 @@
             this.Controls.Add(this.lbCategoryID);
             this.Name = "frmManageCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage Categories";
+            this.Text = "butto";
             this.Load += new System.EventHandler(this.frmManageCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             this.ResumeLayout(false);

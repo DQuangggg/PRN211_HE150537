@@ -62,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(196, 9);
+            this.label2.Location = new System.Drawing.Point(111, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(400, 50);
             this.label2.TabIndex = 1;
@@ -71,7 +71,7 @@
             // lbCategoryID
             // 
             this.lbCategoryID.AutoSize = true;
-            this.lbCategoryID.Location = new System.Drawing.Point(29, 182);
+            this.lbCategoryID.Location = new System.Drawing.Point(35, 182);
             this.lbCategoryID.Name = "lbCategoryID";
             this.lbCategoryID.Size = new System.Drawing.Size(66, 15);
             this.lbCategoryID.TabIndex = 2;
@@ -89,7 +89,7 @@
             // lbWeight
             // 
             this.lbWeight.AutoSize = true;
-            this.lbWeight.Location = new System.Drawing.Point(411, 85);
+            this.lbWeight.Location = new System.Drawing.Point(356, 85);
             this.lbWeight.Name = "lbWeight";
             this.lbWeight.Size = new System.Drawing.Size(45, 15);
             this.lbWeight.TabIndex = 4;
@@ -98,7 +98,7 @@
             // lbUnitInStock
             // 
             this.lbUnitInStock.AutoSize = true;
-            this.lbUnitInStock.Location = new System.Drawing.Point(411, 182);
+            this.lbUnitInStock.Location = new System.Drawing.Point(356, 182);
             this.lbUnitInStock.Name = "lbUnitInStock";
             this.lbUnitInStock.Size = new System.Drawing.Size(68, 15);
             this.lbUnitInStock.TabIndex = 5;
@@ -107,7 +107,7 @@
             // lbUnitPrice
             // 
             this.lbUnitPrice.AutoSize = true;
-            this.lbUnitPrice.Location = new System.Drawing.Point(411, 134);
+            this.lbUnitPrice.Location = new System.Drawing.Point(356, 134);
             this.lbUnitPrice.Name = "lbUnitPrice";
             this.lbUnitPrice.Size = new System.Drawing.Size(55, 15);
             this.lbUnitPrice.TabIndex = 6;
@@ -115,49 +115,49 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(496, 82);
+            this.txtWeight.Location = new System.Drawing.Point(438, 82);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(177, 23);
             this.txtWeight.TabIndex = 7;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(496, 131);
+            this.txtUnitPrice.Location = new System.Drawing.Point(438, 131);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(177, 23);
             this.txtUnitPrice.TabIndex = 8;
             // 
             // txtUnitInStock
             // 
-            this.txtUnitInStock.Location = new System.Drawing.Point(496, 179);
+            this.txtUnitInStock.Location = new System.Drawing.Point(438, 179);
             this.txtUnitInStock.Name = "txtUnitInStock";
             this.txtUnitInStock.Size = new System.Drawing.Size(177, 23);
             this.txtUnitInStock.TabIndex = 9;
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(144, 82);
+            this.txtProductID.Location = new System.Drawing.Point(131, 82);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(177, 23);
             this.txtProductID.TabIndex = 10;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(144, 131);
+            this.txtProductName.Location = new System.Drawing.Point(131, 131);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(177, 23);
             this.txtProductName.TabIndex = 11;
             // 
             // txtCategoryID
             // 
-            this.txtCategoryID.Location = new System.Drawing.Point(144, 179);
+            this.txtCategoryID.Location = new System.Drawing.Point(131, 179);
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.Size = new System.Drawing.Size(177, 23);
             this.txtCategoryID.TabIndex = 12;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(196, 242);
+            this.btnInsert.Location = new System.Drawing.Point(131, 242);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 13;
@@ -167,7 +167,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(326, 242);
+            this.btnUpdate.Location = new System.Drawing.Point(254, 242);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -177,7 +177,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(459, 242);
+            this.btnDelete.Location = new System.Drawing.Point(367, 242);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 15;
@@ -187,7 +187,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(326, 501);
+            this.btnCancel.Location = new System.Drawing.Point(254, 501);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -201,14 +201,14 @@
             this.dgvProduct.Location = new System.Drawing.Point(12, 285);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowTemplate.Height = 25;
-            this.dgvProduct.Size = new System.Drawing.Size(776, 210);
+            this.dgvProduct.Size = new System.Drawing.Size(636, 210);
             this.dgvProduct.TabIndex = 17;
             // 
             // frmManagerProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 536);
+            this.ClientSize = new System.Drawing.Size(684, 536);
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);

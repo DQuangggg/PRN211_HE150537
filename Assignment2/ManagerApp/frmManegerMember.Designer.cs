@@ -89,7 +89,7 @@
             // lbCompanyName
             // 
             this.lbCompanyName.AutoSize = true;
-            this.lbCompanyName.Location = new System.Drawing.Point(396, 86);
+            this.lbCompanyName.Location = new System.Drawing.Point(363, 86);
             this.lbCompanyName.Name = "lbCompanyName";
             this.lbCompanyName.Size = new System.Drawing.Size(94, 15);
             this.lbCompanyName.TabIndex = 4;
@@ -98,7 +98,7 @@
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Location = new System.Drawing.Point(396, 131);
+            this.lbCity.Location = new System.Drawing.Point(363, 131);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(28, 15);
             this.lbCity.TabIndex = 5;
@@ -106,21 +106,21 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(165, 83);
+            this.txtMemberID.Location = new System.Drawing.Point(143, 83);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(176, 23);
             this.txtMemberID.TabIndex = 6;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(165, 128);
+            this.txtEmail.Location = new System.Drawing.Point(143, 128);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(176, 23);
             this.txtEmail.TabIndex = 7;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(165, 174);
+            this.txtPassword.Location = new System.Drawing.Point(143, 174);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(176, 23);
@@ -129,7 +129,7 @@
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(396, 177);
+            this.lbCountry.Location = new System.Drawing.Point(363, 177);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(50, 15);
             this.lbCountry.TabIndex = 9;
@@ -137,28 +137,28 @@
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(518, 83);
+            this.txtCompanyName.Location = new System.Drawing.Point(485, 83);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(176, 23);
             this.txtCompanyName.TabIndex = 10;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(518, 128);
+            this.txtCity.Location = new System.Drawing.Point(485, 128);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(176, 23);
             this.txtCity.TabIndex = 11;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(518, 174);
+            this.txtCountry.Location = new System.Drawing.Point(485, 174);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(176, 23);
             this.txtCountry.TabIndex = 12;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(203, 239);
+            this.btnInsert.Location = new System.Drawing.Point(143, 239);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 13;
@@ -168,7 +168,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(349, 239);
+            this.btnUpdate.Location = new System.Drawing.Point(278, 239);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -178,7 +178,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(503, 239);
+            this.btnDelete.Location = new System.Drawing.Point(415, 239);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 15;
@@ -188,7 +188,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(349, 530);
+            this.btnCancel.Location = new System.Drawing.Point(278, 530);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -202,14 +202,14 @@
             this.dgvMembers.Location = new System.Drawing.Point(12, 278);
             this.dgvMembers.Name = "dgvMembers";
             this.dgvMembers.RowTemplate.Height = 25;
-            this.dgvMembers.Size = new System.Drawing.Size(776, 235);
+            this.dgvMembers.Size = new System.Drawing.Size(673, 235);
             this.dgvMembers.TabIndex = 17;
             // 
             // frmManegerMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 565);
+            this.ClientSize = new System.Drawing.Size(715, 565);
             this.Controls.Add(this.dgvMembers);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
