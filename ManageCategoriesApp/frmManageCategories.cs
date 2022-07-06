@@ -23,8 +23,8 @@ namespace ManageCategoriesApp
             txtCategoryID.DataBindings.Clear();
             txtCategoryName.DataBindings.Clear();
 
-            txtCategoryID.DataBindings.Add("Text", categories, "CategoryID");
-            txtCategoryName.DataBindings.Add("Text", categories, "CategoryName");
+            txtCategoryID.DataBindings.Add("Text", categories, "MemberID");
+            txtCategoryName.DataBindings.Add("Text", categories, "Email");
 
             dgvCategories.DataSource = categories;
         }
@@ -33,7 +33,7 @@ namespace ManageCategoriesApp
         {
             try
             {
-                var category = new Category { CategoryName = txtCategoryName.Text };
+                var category = new Category { Email = txtCategoryName.Text };
                 manageCategories.InsertCategory(category);
                 LoadCategories();
             }
@@ -48,8 +48,8 @@ namespace ManageCategoriesApp
             {
                 var category = new Category
                 {
-                    CategoryID = int.Parse(txtCategoryID.Text),
-                    CategoryName = txtCategoryName.Text
+                    MemberID = int.Parse(txtCategoryID.Text),
+                    Email = txtCategoryName.Text
                 };
                 manageCategories.UpdateCategory(category);
                 LoadCategories();
@@ -65,7 +65,7 @@ namespace ManageCategoriesApp
             try {
                 var category = new Category
                 {
-                    CategoryID = int.Parse(txtCategoryID.Text)
+                    MemberID = int.Parse(txtCategoryID.Text)
                 };
                 manageCategories.DeleteCategory(category);
                 LoadCategories();

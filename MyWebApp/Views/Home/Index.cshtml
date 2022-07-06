@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model MyWebApp.Models.HomeModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>Razor Syntax</h3>
+@{
+    var greeting = "Welcome";
+    var weekDay = DateTime.Now.DayOfWeek;
+}
+@{
+    var pro = new { ProdcutID = 1, ProductName = "Car" };
+    <p>ProductID : @pro.ProdcutID</p>
+    <p>ProductName : @pro.ProductName</p>
+    <p>@greeting</p>
+    <p>@weekDay</p>
+}
+
+
+    @*VIEW BAG*@
+    <h2>Using View Bag </h2>
+    <h3 style="color:red">@ViewBag.Message</h3>
+    <p>ProductID : @ViewBag.Model.ProductID </p>
+    <p>ProductName : @ViewBag.Model.ProductName </p>
+    <p>Brand :  @ViewBag.Model.Brand </p>
+    <p>Price :  @ViewBag.Model.Price </p> 
+  
+
+    @*TEMP DATA*@
+    <h3>Using Temp Data</h3>
+    <ul>
+    @foreach (var data in TempData["StudentData"] as List<string>)
+    {   
+        <li>@data</li>
+    }
+    </ul>
+
+    @*QUERY STRING*@
+@*    <h3>Using Query String</h3>
+    @Html.ActionLink("Pass Data" , "Index" , "Home" , new{Code = 100 , Name = "David" , Department = "Software"} )*@
