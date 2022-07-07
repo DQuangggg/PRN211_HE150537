@@ -27,18 +27,21 @@ namespace ManagerApp
         {
             frmManegerMember frmManegerMember = new frmManegerMember();
             frmManegerMember.Show();
+            this.Hide();
         }
 
         private void managerOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManegerOrder frmManegerOrder = new frmManegerOrder();
             frmManegerOrder.Show();
+            this.Hide();
         }
 
         private void managerOrderDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManagerOrderDetail frmManagerOrderDetail = new frmManagerOrderDetail();
             frmManagerOrderDetail.Show();
+            this.Hide();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +55,36 @@ namespace ManagerApp
         {
             frmManagerProduct frmManagerProduct = new frmManagerProduct();
             frmManagerProduct.Show();
+            this.Hide();
+        }
+
+        private void managerMemberToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            frmManegerMember frmManegerMember = new frmManegerMember();
+            frmManegerMember.Show();
+            this.Hide();
+        }
+
+        private void managerProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagerProduct frmManagerProduct = new frmManagerProduct();
+            frmManagerProduct.Show();
+            this.Hide();
+        }
+
+        private void managerOrderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmManegerOrder frmManegerOrder = new frmManegerOrder();
+            frmManegerOrder.Show();
+            this.Hide();
+        }
+
+        private void managerOrderDetailToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmManagerOrderDetail frmManagerOrderDetail = new frmManagerOrderDetail();
+            frmManagerOrderDetail.Show();
+            this.Hide();
         }
     }
 }

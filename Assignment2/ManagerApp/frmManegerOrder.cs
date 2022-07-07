@@ -21,6 +21,29 @@ namespace ManagerApp
 
         private void LoadOrder() {
             var orders = managerOrder.GetOrders();
+            Validate valid = new Validate();
+            if (rdOrderID.Checked && txtSearch.Text.Length >= 1)
+            {
+                if (!valid.checkNumber(txtSearch.Text))
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    orders = managerOrder.GetOrdersByOrderID(Convert.ToInt32(txtSearch.Text));
+                }
+            }
+            else if (rdMemberID.Checked && txtSearch.Text.Length >= 1)
+            {
+                if (!valid.checkNumber(txtSearch.Text))
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    orders = managerOrder.GetOrdersByMemberID(Convert.ToInt32(txtSearch.Text));
+                }
+            }
             txtOrderID.DataBindings.Clear();
             txtMemberID.DataBindings.Clear();
             txtOrderDate.DataBindings.Clear();
@@ -52,6 +75,8 @@ namespace ManagerApp
                     
                 };
                 managerOrder.InsertOrder(order);
+                dgvOrder.DataSource = null;
+                dgvOrder.Refresh();
                 LoadOrder();
             }
             catch (Exception ex)
@@ -75,6 +100,8 @@ namespace ManagerApp
 
                 };
                 managerOrder.UpdateOrder(order);
+                dgvOrder.DataSource = null;
+                dgvOrder.Refresh();
                 LoadOrder();
             }
             catch (Exception ex)
@@ -92,6 +119,8 @@ namespace ManagerApp
                     OrderID = int.Parse(txtMemberID.Text),
                 };
                 managerOrder.DeleteOrder(order);
+                dgvOrder.DataSource = null;
+                dgvOrder.Refresh();
                 LoadOrder();
             }
             catch (Exception ex)
@@ -107,6 +136,47 @@ namespace ManagerApp
         {
             dgvOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadOrder();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+            this.Hide();
+        }
+
+        private void managerMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagerProduct frmManagerProduct = new frmManagerProduct();
+            frmManagerProduct.Show();
+            this.Hide();
+        }
+
+        private void managerProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagerProduct frmManagerProduct = new frmManagerProduct();
+            frmManagerProduct.Show();
+            this.Hide();
+        }
+
+        private void managerOrderDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagerOrderDetail frmManagerOrderDetail = new frmManagerOrderDetail();
+            frmManagerOrderDetail.Show();
+            this.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadOrder();
+            txtSearch.Clear();
         }
     }
 }

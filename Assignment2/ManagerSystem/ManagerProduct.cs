@@ -5,6 +5,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ManagerSystem
 {
@@ -23,9 +24,9 @@ namespace ManagerSystem
         SqlConnection connection;
         SqlCommand command;
         string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=Ass2PRN;";
+        private static List<Product> products = new List<Product> { };
 
         public List<Product> GetProducts() { 
-            List<Product> products = new List<Product>();
             connection = new SqlConnection(ConnectionString);
             string SQL = "SELECT ProductID, CategoryID, ProductName, Weight, UnitPrice, UnitInStock FROM Product";
             command = new SqlCommand(SQL, connection);
@@ -58,6 +59,14 @@ namespace ManagerSystem
                 connection.Close();
             }
             return products;
+        }
+
+        public List<Product> GetProductsByID(int id) { 
+            return products.Where(Product => id == Product.ProductID).ToList();
+        }
+        public List<Product> GetProductsByName(string name)
+        {
+            return products.Where(x => x.ProductName.ToLower().Contains(name.ToLower())).ToList();
         }
 
         public void InsertProduct(Product product)

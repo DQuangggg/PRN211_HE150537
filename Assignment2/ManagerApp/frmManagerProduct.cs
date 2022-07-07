@@ -21,6 +21,23 @@ namespace ManagerApp
 
         private void LoadProduct() {
             var products = managerProduct.GetProducts();
+            Validate valid = new Validate();
+            if (rdID.Checked && txtSearch.Text.Length >= 1)
+            {
+                if (!valid.checkNumber(txtSearch.Text))
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    products = managerProduct.GetProductsByID(Convert.ToInt32(txtSearch.Text));
+                }
+            }
+            else if (rdName.Checked && txtSearch.Text.Length >= 1)
+            {
+                products = managerProduct.GetProductsByName(txtSearch.Text);
+            }
+            
             txtProductID.DataBindings.Clear();
             txtCategoryID.DataBindings.Clear();
             txtProductName.DataBindings.Clear();
@@ -51,6 +68,8 @@ namespace ManagerApp
                     Weight = txtWeight.Text
                 };
                 managerProduct.InsertProduct(product);
+                dgvProduct.DataSource = null;
+                dgvProduct.Refresh();
                 LoadProduct();
             }
             catch (Exception ex)
@@ -73,6 +92,8 @@ namespace ManagerApp
                     Weight = txtWeight.Text
                 };
                 managerProduct.UpdateProduct(product);
+                dgvProduct.DataSource = null;
+                dgvProduct.Refresh();
                 LoadProduct();
             }
             catch (Exception ex)
@@ -90,6 +111,8 @@ namespace ManagerApp
                     ProductID= int.Parse(txtProductID.Text) ,
                 };
                 managerProduct.DeleteProduct(product);
+                dgvProduct.DataSource = null;
+                dgvProduct.Refresh();
                 LoadProduct();
             }
             catch (Exception ex)
@@ -105,6 +128,47 @@ namespace ManagerApp
         {
             dgvProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadProduct();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+            this.Hide();
+        }
+
+        private void mangerMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManegerMember frmManegerMember = new frmManegerMember();
+            frmManegerMember.Show();
+            this.Hide();
+        }
+
+        private void managerOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManegerOrder frmManegerOrder = new frmManegerOrder();
+            frmManegerOrder.Show();
+            this.Hide();
+        }
+
+        private void managerOrderDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagerOrderDetail frmManagerOrderDetail = new frmManagerOrderDetail();
+            frmManagerOrderDetail.Show();
+            this.Hide();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadProduct();
+            txtSearch.Clear();
         }
     }
 }

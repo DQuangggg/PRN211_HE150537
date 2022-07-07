@@ -5,6 +5,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using System.Linq;
+
 namespace ManagerSystem
 {
 
@@ -22,13 +24,13 @@ namespace ManagerSystem
         SqlConnection connection;
         SqlCommand command;
         string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=Ass2PRN;";
+        private static List<Member> members = new List<Member>();
 
 
         public List<Member> GetMembers()
         {
-            List<Member> members = new List<Member>();
             connection = new SqlConnection(ConnectionString);
-            string SQL = "SELECT  MemberID, Email, CompanyName, City, Country, Password FROM Member";
+            string SQL = "SELECT MemberID, Email, CompanyName, City, Country, Password FROM Member";
             command = new SqlCommand(SQL, connection);
             try
             {
@@ -59,6 +61,16 @@ namespace ManagerSystem
                 connection.Close();
             }
             return members;
+        }
+
+        public List<Member> GetMembersById(int id)
+        {
+            return members.Where(Member => id == Member.MemberID).ToList();
+        }
+
+        public List<Member> GetMembersByName(string name)
+        {
+            return members.Where(x => x.Email.ToLower().Contains(name.ToLower())).ToList();
         }
 
         public void InsertMember(Member member)

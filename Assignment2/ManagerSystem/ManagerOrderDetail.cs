@@ -5,6 +5,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ManagerSystem
 {
@@ -13,16 +14,16 @@ namespace ManagerSystem
         public int ProductID { get; set; }
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
-        public float Discount { get; set; }
+        public double Discount { get; set; }
     }
     public class ManagerOrderDetail
     {
         SqlConnection connection;
         SqlCommand command;
         string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=Ass2PRN;";
+        private static List<OrderDetail> orderDetails = new List<OrderDetail> { };
 
         public List<OrderDetail> GetOrderDetails() {
-            List<OrderDetail> orderDetails = new List<OrderDetail>();
             connection = new SqlConnection(ConnectionString);
             string SQL = "SELECT OrderID,ProductID,UnitPrice,Quantity,Discount FROM OrderDetail";
             command = new SqlCommand(SQL, connection);
@@ -38,7 +39,7 @@ namespace ManagerSystem
                             ProductID = reader.GetInt32("ProductID"),
                             UnitPrice = reader.GetDecimal("UnitPrice"),
                             Quantity = reader.GetInt32("Quantity"),
-                            Discount = reader.GetFloat("Discount")
+                            Discount = reader.GetDouble("Discount")
                         });
                     }
             }
@@ -52,6 +53,15 @@ namespace ManagerSystem
                 connection.Close();
             }
             return orderDetails;
+        }
+
+        public List<OrderDetail> GetOrderDetailByOrderID(int id) { 
+            return orderDetails.Where(OrderDetail => id == OrderDetail.OrderID).ToList();
+        }
+
+        public List<OrderDetail> GetOrderDetailByProductID(int pid)
+        {
+            return orderDetails.Where(OrderDetail => pid == OrderDetail.ProductID).ToList();
         }
 
         public void InsertOrderDetail(OrderDetail orderDetail) {

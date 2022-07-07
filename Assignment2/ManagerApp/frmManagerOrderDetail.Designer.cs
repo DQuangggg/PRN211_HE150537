@@ -44,7 +44,18 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgvOrderDetail = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rdOrderID = new System.Windows.Forms.RadioButton();
+            this.rdProductID = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -169,7 +180,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(280, 561);
+            this.btnCancel.Location = new System.Drawing.Point(280, 652);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 14;
@@ -180,17 +191,110 @@
             // dgvOrderDetail
             // 
             this.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetail.Location = new System.Drawing.Point(12, 329);
+            this.dgvOrderDetail.Location = new System.Drawing.Point(12, 415);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
+            this.dgvOrderDetail.ReadOnly = true;
             this.dgvOrderDetail.RowTemplate.Height = 25;
             this.dgvOrderDetail.Size = new System.Drawing.Size(666, 215);
             this.dgvOrderDetail.TabIndex = 15;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
+            this.managerMemberToolStripMenuItem,
+            this.managerProductToolStripMenuItem,
+            this.managerOrderToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(714, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // homeToolStripMenuItem
+            // 
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // managerMemberToolStripMenuItem
+            // 
+            this.managerMemberToolStripMenuItem.Name = "managerMemberToolStripMenuItem";
+            this.managerMemberToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.managerMemberToolStripMenuItem.Text = "Manager Member";
+            this.managerMemberToolStripMenuItem.Click += new System.EventHandler(this.managerMemberToolStripMenuItem_Click);
+            // 
+            // managerProductToolStripMenuItem
+            // 
+            this.managerProductToolStripMenuItem.Name = "managerProductToolStripMenuItem";
+            this.managerProductToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.managerProductToolStripMenuItem.Text = "Manager Product";
+            this.managerProductToolStripMenuItem.Click += new System.EventHandler(this.managerProductToolStripMenuItem_Click);
+            // 
+            // managerOrderToolStripMenuItem
+            // 
+            this.managerOrderToolStripMenuItem.Name = "managerOrderToolStripMenuItem";
+            this.managerOrderToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.managerOrderToolStripMenuItem.Text = "Manager Order";
+            this.managerOrderToolStripMenuItem.Click += new System.EventHandler(this.managerOrderToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(132, 342);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(257, 23);
+            this.txtSearch.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(429, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rdOrderID
+            // 
+            this.rdOrderID.AutoSize = true;
+            this.rdOrderID.Location = new System.Drawing.Point(151, 380);
+            this.rdOrderID.Name = "rdOrderID";
+            this.rdOrderID.Size = new System.Drawing.Size(85, 19);
+            this.rdOrderID.TabIndex = 19;
+            this.rdOrderID.TabStop = true;
+            this.rdOrderID.Text = "By Order ID";
+            this.rdOrderID.UseVisualStyleBackColor = true;
+            // 
+            // rdProductID
+            // 
+            this.rdProductID.AutoSize = true;
+            this.rdProductID.Location = new System.Drawing.Point(270, 380);
+            this.rdProductID.Name = "rdProductID";
+            this.rdProductID.Size = new System.Drawing.Size(97, 19);
+            this.rdProductID.TabIndex = 20;
+            this.rdProductID.TabStop = true;
+            this.rdProductID.Text = "By Product ID";
+            this.rdProductID.UseVisualStyleBackColor = true;
             // 
             // frmManagerOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 596);
+            this.ClientSize = new System.Drawing.Size(714, 726);
+            this.Controls.Add(this.rdProductID);
+            this.Controls.Add(this.rdOrderID);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvOrderDetail);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
@@ -207,11 +311,15 @@
             this.Controls.Add(this.lbUnitPrice);
             this.Controls.Add(this.lbOrderID);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmManagerOrderDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Detail";
             this.Load += new System.EventHandler(this.frmManagerOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +343,15 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridView dgvOrderDetail;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managerMemberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managerProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managerOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rdOrderID;
+        private System.Windows.Forms.RadioButton rdProductID;
     }
 }

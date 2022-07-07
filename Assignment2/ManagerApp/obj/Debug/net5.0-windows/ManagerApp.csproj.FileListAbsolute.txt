@@ -48,3 +48,4 @@ C:\Users\ADMIN\Documents\GitHub\PRN211_HE150537\Assignment2\ManagerApp\obj\Debug
 C:\Users\ADMIN\Documents\GitHub\PRN211_HE150537\Assignment2\ManagerApp\obj\Debug\net5.0-windows\ManagerApp.frmManagerOrderDetail.resources
 C:\Users\ADMIN\Documents\GitHub\PRN211_HE150537\Assignment2\ManagerApp\obj\Debug\net5.0-windows\ManagerApp.frmLogin.resources
 C:\Users\ADMIN\Documents\GitHub\PRN211_HE150537\Assignment2\ManagerApp\obj\Debug\net5.0-windows\ManagerApp.frmMain.resources
+C:\Users\ADMIN\Documents\GitHub\PRN211_HE150537\Assignment2\ManagerApp\obj\Debug\net5.0-windows\ManagerApp.Properties.Resources.resources
