@@ -484,6 +484,22 @@
             "rid": "win"
           }
         }
+      },
+      "BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "2.1.2",
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessObject.dll": {}
+        }
       }
     }
   },
@@ -1495,10 +1511,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../BusinessObject/BusinessObject.csproj",
+      "msbuildProject": "../BusinessObject/BusinessObject.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BusinessObject >= 1.0.0",
       "Microsoft.Data.SqlClient >= 2.1.2",
       "Microsoft.Extensions.Configuration >= 5.0.0",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
@@ -1531,7 +1553,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ADMIN\\Documents\\GitHub\\PRN211_HE150537\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\PRN211_HE150537\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

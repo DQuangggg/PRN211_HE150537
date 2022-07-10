@@ -30,7 +30,7 @@ namespace ManagerApp
                 }
                 else
                 {
-                    orders = managerOrder.GetOrdersByOrderID(Convert.ToInt32(txtSearch.Text));
+                    orders = managerOrder.getordersbyorderid(Convert.ToInt32(txtSearch.Text));
                 }
             }
             else if (rdMemberID.Checked && txtSearch.Text.Length >= 1)
@@ -41,7 +41,7 @@ namespace ManagerApp
                 }
                 else
                 {
-                    orders = managerOrder.GetOrdersByMemberID(Convert.ToInt32(txtSearch.Text));
+                    orders = managerOrder.getordersbymemberid(Convert.ToInt32(txtSearch.Text));
                 }
             }
             txtOrderID.DataBindings.Clear();

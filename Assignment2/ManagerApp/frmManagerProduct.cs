@@ -37,7 +37,7 @@ namespace ManagerApp
             {
                 products = managerProduct.GetProductsByName(txtSearch.Text);
             }
-            
+
             txtProductID.DataBindings.Clear();
             txtCategoryID.DataBindings.Clear();
             txtProductName.DataBindings.Clear();

@@ -30,16 +30,16 @@ namespace ManagerApp
             {
                 if (!valid.checkNumber(txtSearch.Text))
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("error");
                 }
                 else
                 {
-                    members = managerMember.GetMembersById(Convert.ToInt32(txtSearch.Text));
+                    members = managerMember.getmembersbyid(Convert.ToInt32(txtSearch.Text));
                 }
             }
             else if (rdName.Checked && txtSearch.Text.Length >= 1)
             {
-                members = managerMember.GetMembersByName(txtSearch.Text);
+                members = managerMember.getmembersbyname(txtSearch.Text);
 
             }
 
@@ -59,6 +59,7 @@ namespace ManagerApp
                 txtCountry.DataBindings.Add("Text", members, "Country");
                 txtEmail.DataBindings.Add("Text", members, "Email");
                 txtPassword.DataBindings.Add("Text", members, "Password");
+               
                 dgvMembers.DataSource = null;
                 dgvMembers.Rows.Clear();
                 dgvMembers.DataSource = members;
@@ -118,6 +119,7 @@ namespace ManagerApp
                 managerMember.DeleteMember(member);
                 dgvMembers.DataSource = null;
                 dgvMembers.Refresh();
+                dgvMembers.Update();
                 LoadMember();
             }
             catch (Exception ex)
@@ -165,14 +167,18 @@ namespace ManagerApp
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
             this.Hide();
+
         }
 
 
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             LoadMember();
-            txtSearch.Clear();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
 
         }
     }

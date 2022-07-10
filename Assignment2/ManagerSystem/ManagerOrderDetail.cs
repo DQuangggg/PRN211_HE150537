@@ -21,9 +21,11 @@ namespace ManagerSystem
         SqlConnection connection;
         SqlCommand command;
         string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=Ass2PRN;";
-        private static List<OrderDetail> orderDetails = new List<OrderDetail> { };
+        //private static List<OrderDetail> orderDetails = new List<OrderDetail> { };
+        List<OrderDetail> orderDetails;
 
         public List<OrderDetail> GetOrderDetails() {
+            orderDetails = new List<OrderDetail>();
             connection = new SqlConnection(ConnectionString);
             string SQL = "SELECT OrderID,ProductID,UnitPrice,Quantity,Discount FROM OrderDetail";
             command = new SqlCommand(SQL, connection);
@@ -55,7 +57,8 @@ namespace ManagerSystem
             return orderDetails;
         }
 
-        public List<OrderDetail> GetOrderDetailByOrderID(int id) { 
+        public List<OrderDetail> GetOrderDetailByOrderID(int id)
+        {
             return orderDetails.Where(OrderDetail => id == OrderDetail.OrderID).ToList();
         }
 

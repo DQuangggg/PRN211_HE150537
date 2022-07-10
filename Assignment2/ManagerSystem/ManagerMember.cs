@@ -24,11 +24,12 @@ namespace ManagerSystem
         SqlConnection connection;
         SqlCommand command;
         string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=Ass2PRN;";
-        private static List<Member> members = new List<Member>();
-
+        //private static List<Member> members = new List<Member>();
+        List<Member> members;
 
         public List<Member> GetMembers()
         {
+            members = new List<Member>();
             connection = new SqlConnection(ConnectionString);
             string SQL = "SELECT MemberID, Email, CompanyName, City, Country, Password FROM Member";
             command = new SqlCommand(SQL, connection);
@@ -63,15 +64,19 @@ namespace ManagerSystem
             return members;
         }
 
-        public List<Member> GetMembersById(int id)
+
+        public List<Member> getmembersbyid(int id)
         {
-            return members.Where(Member => id == Member.MemberID).ToList();
+            List<Member> members = new List<Member>();
+            return members.Where(member => id == member.MemberID).ToList();
         }
 
-        public List<Member> GetMembersByName(string name)
+        public List<Member> getmembersbyname(string name)
         {
+            List<Member> members = new List<Member>();
             return members.Where(x => x.Email.ToLower().Contains(name.ToLower())).ToList();
         }
+
 
         public void InsertMember(Member member)
         {
