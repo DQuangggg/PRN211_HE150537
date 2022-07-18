@@ -86,5 +86,6 @@ namespace ManagerApp
             frmManagerOrderDetail.Show();
             this.Hide();
         }
+
     }
 }

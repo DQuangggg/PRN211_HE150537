@@ -12,9 +12,9 @@ namespace DemoDataProviderFactory
     {   
 
         static string GetConnectionString() {
-            //        IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true).Build();
-            //        var strConnetion = config["ConnectionString:MyStoreDB"];
-            var strConnetion = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=MyStore;";
+                   IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true).Build();
+                   var strConnetion = config["ConnectionString:MyStoreDB"];
+           // var strConnetion = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=MyStore;";
             return strConnetion;
         }
 

@@ -128,7 +128,8 @@ namespace ManagerApp
             }
         }
         private void frmManegerMember_Load(object sender, EventArgs e)
-        { 
+        {
+          //  btnDelete.Enabled = false;
             LoadMember();
         }
 
@@ -174,12 +175,12 @@ namespace ManagerApp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadMember();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            LoadMember();
+            txtSearch.Clear();
         }
     }
 }

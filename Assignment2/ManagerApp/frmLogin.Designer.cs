@@ -32,9 +32,9 @@
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -73,15 +73,6 @@
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "admin@fstore.com";
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(144, 154);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(226, 23);
-            this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = " admin@@";
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(144, 220);
@@ -102,14 +93,23 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(144, 154);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(226, 23);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.Text = "admin@@";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 273);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUsername);
@@ -128,8 +128,8 @@
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

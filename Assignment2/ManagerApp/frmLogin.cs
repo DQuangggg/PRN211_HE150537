@@ -37,7 +37,8 @@ namespace ManagerApp
                 this.Hide();
             }
             else {
-                MessageBox.Show("Error");
+                MessageBox.Show("Wrong Username or Password");
+                txtPassword.Clear();
             }
         }
     }

@@ -24,7 +24,7 @@ namespace DataAccess
         {
             return listMember.Where(Member => id == Member.MemberID).ToList();
         }
-
+            
         public List<Member> GetMemberByName(string name)
         {
             return listMember.Where(x => x.MemberName.ToLower().Contains(name.ToLower())).ToList();
@@ -64,7 +64,7 @@ namespace DataAccess
         }
 
         public void DeleteMemberById(int id)
-        {
+        {       
             Member memberObject = GetMemBerById(id);
             if (memberObject != null)
             {

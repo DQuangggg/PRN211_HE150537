@@ -19,10 +19,10 @@ namespace AutomobileLibrary.DataAccess
         }
 
         public String GetConnectionString() {
-            string connectionString;
-            IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true).Build();
-            connectionString = config["ConnectionString:MyStockDB"];
-            return connectionString;
+            SqlConnection connection;
+            SqlCommand command;
+            string ConnectionString = "Server=QUANGGGG\\QUANG;uid=sa;pwd=dangquang2001;database=MyStock;";
+            return ConnectionString;
         }
 
         public void CloseConnection() => dataProvier.CloseConnection(connection);
